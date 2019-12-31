@@ -36,10 +36,17 @@ class ImgDragAndDrop extends Component {
                             const response = await fetch('/extract_text', {
                                 method: 'POST',
                                 body: images[0]
-                            })
+                            });
 
                             console.log(response);
                         }}>submit</Button>
+                    </Form.Field>
+                    <Form.Field>
+                        <Button onClick={async () => {
+                            const response = await fetch('/download_file');
+
+                            console.log(response);
+                        }}>download</Button>
                     </Form.Field>
                 </Form>
             </div>
