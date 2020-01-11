@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Beautify Notes</title>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='mainpage.css') }}">
+   <link rel="icon" href="{{ url_for('static',filename='icon.png') }}">
+</head>
+<body>
+   <div class="container">
+      <header class="main-header">
+         <h1>Beautify Notes</h1>
+         <p>
+            <strong>Create PDF and Latex files from images</strong>
+         </p>
+      </header>
+      <form name='imageform' action="/" method="post" enctype="multipart/form-data">
+         <div class='box'>
+            <div class='file-selection'>
+               <input type='file' name='file' class="inputfile" multiple="multiple">
+               <label for="file"><span>Select your images&hellip;</span></label>
+            </div>
+            <input type='submit' class='input-button' value='Get PDF and Latex'>
+         </div>
+      </form>
+   </div>
+</body>
+</html>

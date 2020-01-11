@@ -1,0 +1,51 @@
+body {
+    font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+    color: #2D162C;
+    background-color: #fff5d7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+
+header.main-header {
+	padding: 2em 1em 4em;
+	text-align: center;
+}
+
+.main-header h1 {
+	margin: 0.5em 0 0;
+	letter-spacing: -1px;
+	font-size: 4em;
+	line-height: 1;
+}
+
+/* Container styling */
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0 3em 0;
+}
+
+.box {
+	display: flex;
+	padding: 4.25rem 1.25rem;
+	flex-direction: column;	
+	align-items: center;
+}
+
+.file-selection {
+	padding: 3.25rem 1.25rem;
+	font-size: 16px;
+}
+
+.input-button {
+	padding: 12px 28px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+  }
+

@@ -1,6 +1,4 @@
 __pycache__
 venv
-client/node_modules
-api/uploads
 .flaskenv
-.vscode/settings.json
+.vscode
