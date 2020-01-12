@@ -78,10 +78,11 @@ def index():
                 # extract text from file
                 extractedtext.append(extract_text(filepath))
 
-                print('gottext')
-                
                 # remove temporary file
                 os.remove(filepath)
+
+        print(extractedtext)
+                
 
         # create latex document
         doc = Document('basic')
