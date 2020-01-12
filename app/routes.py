@@ -1,7 +1,6 @@
 import os, io, uuid
 import zipfile
 from flask import Blueprint, request, redirect, url_for, render_template, send_file, after_this_request
-from werkzeug.utils import secure_filename
 from pylatex import Document, Section
 
 from google.cloud import vision
@@ -10,7 +9,7 @@ from google.cloud.vision import types
 main = Blueprint('main', __name__)
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.path.dirname(__file__) + '/VisionServiceAccountToken.json'
-os.environ['UPLOAD_FOLDER'] = '/uploads/'
+# os.environ['UPLOAD_FOLDER'] = 'uploads/'
 ALLOWED_EXTENSIONS = {'jpg', 'png', 'jpeg'}
 
 
@@ -70,8 +69,8 @@ def index():
         for file in files:
             if allowed_file(file.filename):
                 # save as temporary files for processing
-                unique_filename = secure_filename(uuid.uuid4().urn[9:] + '.' + file.filename.rsplit('.', 1)[1].lower())
-                filepath = os.path.join(os.environ['UPLOAD_FOLDER'], unique_filename)
+                unique_filename = uuid.uuid4().urn[9:] + '.' + file.filename.rsplit('.', 1)[1].lower()
+                filepath = os.path.join('uploads/', unique_filename)
                 
                 print('savedfilepath:' + filepath)
                 file.save(filepath)
