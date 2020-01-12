@@ -1,6 +1,6 @@
 import os, io, uuid
 import zipfile
-from flask import Blueprint, request, redirect, url_for, render_template, send_file, after_this_request
+from flask import Blueprint, request, redirect, url_for, render_template, send_file, after_this_request, secure_filename
 from pylatex import Document, Section
 
 from google.cloud import vision
