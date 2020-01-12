@@ -1,5 +1,1 @@
-__pycache__
-venv
-.flaskenv
-.vscode
-ServiceAccountToken.json
+app/ServiceAccountToken.json
