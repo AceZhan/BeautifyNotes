@@ -8,8 +8,8 @@ from google.cloud.vision import types
 
 main = Blueprint('main', __name__)
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.path.dirname(os.path.abspath(__file__)) + '/VisionServiceAccountToken.json'
-os.environ['UPLOAD_FOLDER'] = os.path.dirname(os.path.abspath(__file__)) + '/uploads/'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.path.dirname(__file__) + '/VisionServiceAccountToken.json'
+os.environ['UPLOAD_FOLDER'] = os.path.dirname(__file__) + '/uploads/'
 ALLOWED_EXTENSIONS = {'jpg', 'png', 'jpeg'}
 
 
@@ -71,10 +71,11 @@ def index():
                 # save as temporary files for processing
                 unique_filename = uuid.uuid4().urn[9:] + '.' + file.filename.rsplit('.', 1)[1].lower()
                 filepath = os.path.join(os.environ['UPLOAD_FOLDER'], unique_filename)
+                # print(filepath)
                 file.save(filepath)
 
                 # extract text from file
-                extractedtext.append(extract_text(filepath))
+                # extractedtext.append(extract_text(filepath))
                 
                 # remove temporary file
                 os.remove(filepath)
