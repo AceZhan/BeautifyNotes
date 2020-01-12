@@ -8,7 +8,7 @@ from google.cloud.vision import types
 
 main = Blueprint('main', __name__)
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.path.dirname(os.path.abspath(__file__)) + '/ServiceAccountToken.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.path.dirname(os.path.abspath(__file__)) + '/VisionServiceAccountToken.json'
 os.environ['UPLOAD_FOLDER'] = os.path.dirname(os.path.abspath(__file__)) + '/uploads/'
 ALLOWED_EXTENSIONS = {'jpg', 'png', 'jpeg'}
 
