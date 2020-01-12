@@ -71,11 +71,14 @@ def index():
                 # save as temporary files for processing
                 unique_filename = uuid.uuid4().urn[9:] + '.' + file.filename.rsplit('.', 1)[1].lower()
                 filepath = os.path.join(os.environ['UPLOAD_FOLDER'], unique_filename)
-                # print(filepath)
+                
+                print('savedfilepath:' + filepath)
                 file.save(filepath)
 
                 # extract text from file
                 # extractedtext.append(extract_text(filepath))
+
+                print('gottext')
                 
                 # remove temporary file
                 os.remove(filepath)
