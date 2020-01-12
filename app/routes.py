@@ -76,7 +76,7 @@ def index():
                 file.save(filepath)
 
                 # extract text from file
-                # extractedtext.append(extract_text(filepath))
+                extractedtext.append(extract_text(filepath))
 
                 print('gottext')
                 
