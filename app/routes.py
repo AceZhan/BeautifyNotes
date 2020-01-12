@@ -69,7 +69,7 @@ def index():
         for file in files:
             if allowed_file(file.filename):
                 # save as temporary files for processing
-                unique_filename = uuid.uuid4().urn[9:] + '.' + file.filename.rsplit('.', 1)[1].lower()
+                unique_filename = secure_filename(uuid.uuid4().urn[9:] + '.' + file.filename.rsplit('.', 1)[1].lower())
                 filepath = os.path.join(os.environ['UPLOAD_FOLDER'], unique_filename)
                 
                 print('savedfilepath:' + filepath)
