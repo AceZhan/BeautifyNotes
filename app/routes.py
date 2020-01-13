@@ -82,7 +82,7 @@ def index():
                 
 
         # create latex document
-        doc = Document('basic', page_numbers=False)
+        doc = Document(page_numbers=False, lmodern=False, fontenc=None, inputenc=None )
         with doc.create(Section('Extracted text')):
             for page in extractedtext:
                 for index in range(0, len(page), 1):
