@@ -48,8 +48,8 @@ def extract_text(file_path):
 
     return lines
 
-# limit upload size upto 8mb
-# app.config['MAX_CONTENT_LENGTH'] = 8 * 1024 * 1024
+# limit upload size upto 2mb
+# app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024
 
 
 def allowed_file(filename):
