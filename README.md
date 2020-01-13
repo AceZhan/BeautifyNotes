@@ -4,6 +4,6 @@
 
 A simple application used to converted text within image into PDF/Latex done using Google Vision API and Flask.
 
-See it in action: beautify-notes.herokuapp.com/
+See it in action: https://beautify-notes.herokuapp.com/
 
 ====================
