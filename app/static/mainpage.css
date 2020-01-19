@@ -19,6 +19,11 @@ header.main-header {
 	line-height: 1;
 }
 
+.main-header p {
+	font-size: 1.4em;
+	color: #008080;
+}
+
 /* Container styling */
 
 .container {
@@ -31,13 +36,32 @@ header.main-header {
 
 .box {
 	display: flex;
-	padding: 4.25rem 1.25rem;
+	padding: 2rem 1.25rem;
 	flex-direction: column;	
 	align-items: center;
 }
 
+/* instruction styling */
+.instr {
+	text-align: center;
+	display: flex;
+	flex-direction: column;	
+	border-style: solid;
+	padding-top: 5px;
+}
+
+ol { 
+	display: inline-block;
+	text-align: left;
+	padding-inline-end: 40px;
+	line-height: 1.5;
+}
+
+/* file selection styling */
 .file-selection {
-	padding: 3.25rem 1.25rem;
+	padding-top: 5.5rem;
+	padding-bottom: 2.5rem;
+	/* padding: 4.25rem 1.25rem; */
 	font-size: 16px;
 }
 
